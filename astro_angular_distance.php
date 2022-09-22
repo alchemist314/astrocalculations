@@ -163,8 +163,7 @@ $sConfMinYear = $sStartYear;
 $aResultQuery = fQueryExecutor($sBirthDateTime, 1, 1);
 for ($l = 0; $l < count($aResultQuery); $l++) {
     $aArrClean = fTrueExplode($aResultQuery[$l]);
-    $sPlnGRD = str_replace(".", ",", $aArrClean[1]);
-    $aPlanetsGRD_First[] = $sPlnGRD;
+    $aPlanetsGRD_First[] = $aArrClean[1];
 }
 
 for ($m = 0; $m < 365; $m++) {
@@ -177,8 +176,7 @@ for ($m = 0; $m < 365; $m++) {
 
     for ($l = 0; $l < count($aResultQuery); $l++) {
         $aArrClean = fTrueExplode($aResultQuery[$l]);
-        $sPlnGRD = str_replace(".", ",", $aArrClean[1]);
-        $aPlanetsGRD[] = $sPlnGRD;
+        $aPlanetsGRD[] = $aArrClean[1];
     }
 
     unset($aAspects);
