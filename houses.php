@@ -1,7 +1,7 @@
 <?php
 
 ini_set("display_errors", 1);
-ini_set("error_reporting", E_WARNINGS);
+ini_set("error_reporting", E_WARNING);
 ini_set("max_execution_time", 600);
 ini_set("memory_limit", "600M");
 ini_set("default_socket_timeout", 600);
@@ -12,26 +12,26 @@ define('PATH_TO_SWETEST', '/var/www/html/astro_cycle');
 $aPlanetsName = array("sun", "moon", "mercury", "venus", "mars", "jupiter", "saturn", "uran", "neptun", "pluton");
 $aZodiacName = array("Ari", "Tau", "Gem", "Cnc", "Leo", "Vir", "Lib", "Sco", "Sgr", "Cap", "Aqr", "Psc");
 
-//$aPlnChart[sun] = true;
-//$aPlnChart[moon]=true;
-//$aPlnChart[mercury]=true;
-//$aPlnChart[venus]=true;
-//$aPlnChart[mars]=true;
-$aPlnChart[jupiter] = true;
-//$aPlnChart[saturn] = true;
-//$aPlnChart[uran] = true;
-//$aPlnChart[neptun]=true;
-//$aPlnChart[pluton]=true;
-//$aPlnShow[sun] = true;
-//$aPlnShow[moon]=true;
-//$aPlnShow[mercury]=true;
-//$aPlnShow[venus]=true;
-//$aPlnShow[mars]=true;
-$aPlnShow[jupiter] = true;
-//$aPlnShow[saturn]=true;
-//$aPlnShow[uran]=true;
-//$aPlnShow[neptun]=true;
-//$aPlnShow[pluton]=true;
+//$aPlnChart['sun'] = true;
+//$aPlnChart['moon']=true;
+//$aPlnChart['mercury']=true;
+//$aPlnChart['venus']=true;
+//$aPlnChart['mars']=true;
+$aPlnChart['jupiter'] = true;
+//$aPlnChart['saturn'] = true;
+//$aPlnChart['uran'] = true;
+//$aPlnChart['neptun']=true;
+//$aPlnChart['pluton']=true;
+//$aPlnShow['sun'] = true;
+//$aPlnShow['moon']=true;
+//$aPlnShow['mercury']=true;
+//$aPlnShow['venus']=true;
+//$aPlnShow['mars']=true;
+$aPlnShow['jupiter'] = true;
+//$aPlnShow['saturn']=true;
+//$aPlnShow['uran']=true;
+//$aPlnShow['neptun']=true;
+//$aPlnShow['pluton']=true;
 
 
 $sBirthDateTime = "05.02.1981 02:25:00";
