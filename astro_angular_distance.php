@@ -198,7 +198,7 @@ foreach ($aGRDAspectsByDate as $sAspDate => $aAsp) {
     print "<br><b>" . $sAspDate . ":</b>";
     foreach ($aAsp as $sGRD => $aAspName) {
         foreach ($aAspName as $sAspName => $sRealGRD) {
-            print "<br>&nbsp;&nbsp;&nbsp;&nbsp;" . $sAspName . " " . $sRealGRD;
+            print "<br>&nbsp;&nbsp;&nbsp;&nbsp;" . $sAspName . " " . round($sRealGRD,2);
         }
         print "<br>";
     }
@@ -345,18 +345,19 @@ function fAspByGRD($aPlanetsGRD_First, $aPlanetsGRD_Second) {
 }
 
 function fCalcWeight($sGRD, $sRegExp, $aAspects, $aDateArray, $sDate) {
-    foreach ($aAspects['name'][$sGRD] as $sNum => $sPLN) {
-        unset($sPrc);
-        if (preg_match($sRegExp, $sPLN)) {
-            if (!$sGRD == 0) {
-                $sPrc = abs(10 - floor(abs(100 - (($aAspects['grd'][$sGRD][$sPLN] * 100) / $sGRD))));
-            } else {
-                $sPrc = 10;
+    if (is_array($aAspects['name'][$sGRD])) {
+        foreach ($aAspects['name'][$sGRD] as $sNum => $sPLN) {
+            unset($sPrc);
+            if (preg_match($sRegExp, $sPLN)) {
+                if (!$sGRD == 0) {
+                    $sPrc = abs(10 - floor(abs(100 - (($aAspects['grd'][$sGRD][$sPLN] * 100) / $sGRD))));
+                } else {
+                    $sPrc = 10;
+                }
+                $aDateArray[$sDate] += $sPrc;
             }
-            $aDateArray[$sDate] += $sPrc;
         }
     }
-
     return $aDateArray;
 }
 
